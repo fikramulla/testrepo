@@ -27,7 +27,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>stat6306introdatascience/README.md at master · fikramulla/stat6306introdatascience</title>
+  <title>stat6306introdatascience/EDA-NYTdata.md at master · fikramulla/stat6306introdatascience</title>
     <meta name="description" content="Files and projects for Stat 6306 Introduction to Data Science - fikramulla/stat6306introdatascience">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -37,10 +37,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/42952774?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="fikramulla/stat6306introdatascience" /><meta property="og:url" content="https://github.com/fikramulla/stat6306introdatascience" /><meta property="og:description" content="Files and projects for Stat 6306 Introduction to Data Science - fikramulla/stat6306introdatascience" />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE2MDA4NTExOjNhN2VhNDU5YzQ2ODIwNDYwY2ZhNzY0Mjc1MDU1YzlhZTM5MDdhZDNlNjQzYWMwN2ZlZDJkZGE5NmU5MGM3Mjc=--57514d7c99a3b8aeb1258828a4740543b285a3a3">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzE2MDA4NTExOjgyNGI2ODVlOWY1OGE5ZTJmMmY1OWVlMDE5YzBiODExNzk2ZmQ0YjJhZjU3MzExZDAzZTczZmQyZjlkOGY3ODA=--ad5613a4a6d51a3d56ccbd8776d94168652d5afd">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="83E3:3372:5DC127:90BC0E:5B97157A" data-pjax-transient>
+  <meta name="request-id" content="83E3:3372:5DB402:90B82E:5B971576" data-pjax-transient>
 
 
   
@@ -51,7 +51,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="83E3:3372:5DC127:90BC0E:5B97157A" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="42952774" /><meta name="octolytics-actor-login" content="fikramulla" /><meta name="octolytics-actor-hash" content="3cf5078a1865335adcf2eca4127fa2f55a6c6ac7730c74173ed694d5f2d150d3" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="83E3:3372:5DB402:90B82E:5B971576" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="42952774" /><meta name="octolytics-actor-login" content="fikramulla" /><meta name="octolytics-actor-hash" content="3cf5078a1865335adcf2eca4127fa2f55a6c6ac7730c74173ed694d5f2d150d3" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -70,7 +70,7 @@
     <meta name="user-login" content="fikramulla">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="MjdmMzRiMzAwZDRiZTY2ZTQyZjNkMzc3ODRhMzM0YTJjMmE3M2ZlNGUzZDBiZGYwOTY4ZjdmNzIxOTFiMjM2NXx7InJlbW90ZV9hZGRyZXNzIjoiNDAuMTM0LjEwNi4yMTgiLCJyZXF1ZXN0X2lkIjoiODNFMzozMzcyOjVEQzEyNzo5MEJDMEU6NUI5NzE1N0EiLCJ0aW1lc3RhbXAiOjE1MzY2MjgxMjAsImhvc3QiOiJnaXRodWIuY29tIn0=">
+    <meta name="js-proxy-site-detection-payload" content="YTAzOTk1NGI4MTg2MTI2ZDI1NWY0M2Y5ODA1NTkzYjY0YzQ2NGQwMDI2NmZiNzI1Nzk5MWQ4NWY2MDIyNmIxMHx7InJlbW90ZV9hZGRyZXNzIjoiNDAuMTM0LjEwNi4yMTgiLCJyZXF1ZXN0X2lkIjoiODNFMzozMzcyOjVEQjQwMjo5MEI4MkU6NUI5NzE1NzYiLCJ0aW1lc3RhbXAiOjE1MzY2MjgwOTAsImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_DOCKERFILE_CI_CTA,MARKETPLACE_PLAN_RESTRICTION_EDITOR,MARKETPLACE_SEARCH,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES,MARKETPLACE_RETARGETING">
 
@@ -86,7 +86,7 @@
   <meta name="octolytics-dimension-user_id" content="42952774" /><meta name="octolytics-dimension-user_login" content="fikramulla" /><meta name="octolytics-dimension-repository_id" content="148239627" /><meta name="octolytics-dimension-repository_nwo" content="fikramulla/stat6306introdatascience" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="true" /><meta name="octolytics-dimension-repository_parent_id" content="41495288" /><meta name="octolytics-dimension-repository_parent_nwo" content="MonnieMcGee/stat6306introdatascience" /><meta name="octolytics-dimension-repository_network_root_id" content="41495288" /><meta name="octolytics-dimension-repository_network_root_nwo" content="MonnieMcGee/stat6306introdatascience" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="true" />
 
 
-    <link rel="canonical" href="https://github.com/fikramulla/stat6306introdatascience/blob/master/README.md" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata.md" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -155,7 +155,7 @@
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=tRCPIH5Q8CJ9pHCjarsFbvDzQPtUwLwjmkD9EqmWK81puRD6oIV3v4pi0yC8ookcGxsI7NpPiooxOQueSF4RuA=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=POqXECb40/GESZ+tZ2CsamdAI+ZvJuDx3ox0BiBZDvPgQwjK+C1UbHOPPC6xeSAYjKhr8eGp1lh19YKKwZE0hg=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -298,7 +298,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="rHxEGl47Gvs6J95nQPJaQqjs4OQ0iS+CX8MIbjKTr7poxXFhjMzRoPPt7AHPGyfL7yJz9rKMBlvIeSGAAR1B5A==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="FIOF6kgMHOhBSDSUhHCxGuVkdRPxmGv1EYqCTL4qCATQOrCRmvvXs4iCBvILmcyToqrmAXedQiyGMKuijaTmWg==" />
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -311,7 +311,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="T68g6DovWJl/B5IzxgApzltoJoPD74EWCTB1DHelxZOLFhWT6NiTwrbNoFVJ6VRHHKa1kUXqqM+eilziRCsrzQ==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7taTwYam3VHLnhcWpETb0/EkeALP2EuaO4oV1nUV97wqb6a6VFEWCgJUJXArraZaturrEEndYkOsMDw4RpsZ4g==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -349,7 +349,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-remote="true" class="js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="eYsmd4pc3/odHh96Hj0t3yzI8dFGJw5gKjxES1b2DoTfFcAqcDqFvPWG2tiatnzoURPByphYm/BAg/zZ7SYHpA==" />      <input type="hidden" name="repository_id" id="repository_id" value="148239627" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-remote="true" class="js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7vZJ7Jk6s5nOKUkkBbryKsRw5t7mZyG9gR313NWX+7pIaK+xY1zp3yaxjIaBMaMduavWxTgYtC3rok1Obkfymg==" />      <input type="hidden" name="repository_id" id="repository_id" value="148239627" class="form-control" />
 
         <div class="select-menu js-menu-container js-select-menu">
           <a href="/fikramulla/stat6306introdatascience/subscription"
@@ -429,7 +429,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/fikramulla/stat6306introdatascience/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="6vzQ3zfJ25BjdA5p2cs3DrD58Qu4WgiNPnaDSz3XubONtzRIK3Sl7+8IKrMxOcYZx2gojWzMosNs7JACSTVfuw==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/fikramulla/stat6306introdatascience/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="wcVlQhYlzPSsBJ1NuomJKUtXTFkAuSnrLHRQyGkF3JOmjoHVCpiyiyB4uZdSe3g+PMaV39Qvg6V+7kOBHec6mw==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -444,7 +444,7 @@
           0
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/fikramulla/stat6306introdatascience/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="3zet6gtR89o5bpvVKS7hQOuRMbeBRa+HGJYLrQF6zlmh30iR2uFnx8h459k0tSWdhJ+GNvhAw2Rsx+OoN7lspA==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/fikramulla/stat6306introdatascience/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="MW8VeEkMbo8QVJ9aGObFwLWL6IJGsNQrw67NEhPFufZPh/ADmLz6kuFC41YFfQEd2oVfAz+1uMi3/yUXJQYbCw==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -537,9 +537,9 @@
   <div class="repository-content ">
 
     
-  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/fikramulla/stat6306introdatascience/blob/70bb5e6f0a4dd1d7b26cb6811b4de125366c3c97/README.md">Permalink</a>
+  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/fikramulla/stat6306introdatascience/blob/70bb5e6f0a4dd1d7b26cb6811b4de125366c3c97/EDA-NYTdata.md">Permalink</a>
 
-  <!-- blob contrib key: blob_contributors:v21:7165af7a84c23e9a7a00759e68330878 -->
+  <!-- blob contrib key: blob_contributors:v21:78cd8da96fda7a2c9f7361e83a75b807 -->
 
   
 
@@ -583,7 +583,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/fikramulla/stat6306introdatascience/blob/master/README.md"
+               href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata.md"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -594,10 +594,10 @@
             </a>
         </div>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="select-menu-new-item-form js-new-item-form" action="/fikramulla/stat6306introdatascience/branches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="HaGGy7fj04+6iQ2LXYTPk34L8ksf6OIhZILk3PQ7IaC+PpLvw83lnNQlfdkRjoKP+aBcOnAQs5A/DpCdjws3wQ==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="select-menu-new-item-form js-new-item-form" action="/fikramulla/stat6306introdatascience/branches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="1MCx5cKsKEIdU//mDcTbTM6GbyFdVZMXlJcI319HywR3X6XBtoIeUXP/j7RBzpZQSS3BUDKtwqbPG3yeJHfdZQ==" />
             <input type="hidden" name="name" id="name" class="js-new-item-value">
             <input type="hidden" name="branch" id="branch" value="master">
-            <input type="hidden" name="path" id="path" value="README.md">
+            <input type="hidden" name="path" id="path" value="EDA-NYTdata.md">
 
             <button type="submit" class="width-full select-menu-item js-navigation-open js-navigation-item">
               <svg class="octicon octicon-git-branch select-menu-item-icon" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
@@ -634,12 +634,12 @@
       </clipboard-copy>
     </div>
     <div id="blob-path" class="breadcrumb">
-      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/fikramulla/stat6306introdatascience"><span>stat6306introdatascience</span></a></span></span><span class="separator">/</span><strong class="final-path">README.md</strong>
+      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/fikramulla/stat6306introdatascience"><span>stat6306introdatascience</span></a></span></span><span class="separator">/</span><strong class="final-path">EDA-NYTdata.md</strong>
     </div>
   </div>
 
 
-  <include-fragment src="/fikramulla/stat6306introdatascience/contributors/master/README.md" class="commit-tease commit-loader">
+  <include-fragment src="/fikramulla/stat6306introdatascience/contributors/master/EDA-NYTdata.md" class="commit-tease commit-loader">
     <div>
       Fetching contributors&hellip;
     </div>
@@ -656,9 +656,9 @@
   <div class="file-actions">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/fikramulla/stat6306introdatascience/raw/master/README.md">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/fikramulla/stat6306introdatascience/blame/master/README.md">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/fikramulla/stat6306introdatascience/commits/master/README.md">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata.md">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/fikramulla/stat6306introdatascience/blame/master/EDA-NYTdata.md">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/fikramulla/stat6306introdatascience/commits/master/EDA-NYTdata.md">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
@@ -668,13 +668,13 @@
             <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
         </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/fikramulla/stat6306introdatascience/edit/master/README.md" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="/KB7YW4U/J+fsiI1U/XVMsO96W8r1+FrcG33gvUdDAA0zqrQd0Fkbsg9I5Be7YbCIJ4BZS2pbaacpYP5ufLARw==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/fikramulla/stat6306introdatascience/edit/master/EDA-NYTdata.md" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="gZzf02SJ+HIx7bhSkWx3wgBG2J5DhAh5FfTmDt7lam68ydhy7VvmN0NYu+7+hpzRq4kHISyOfrObTprEaw5/FQ==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit this file" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
             </button>
 </form>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/fikramulla/stat6306introdatascience/delete/master/README.md" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IPiIUhYNX2Z0SRWs2H2sFoulaV92rAnI8CZk1SqBB9VK9TEYVMsC6qLe5GxjmWQ548LXk/eAGd24GzqSsE8uoA==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/fikramulla/stat6306introdatascience/delete/master/EDA-NYTdata.md" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="uisSqNRM/GbxbFNiOxc/qddLPQacmu2l/nt6TOhwJZlXL8BqV1k4cZ5kJyERAWf6ZPQzWaV4M4tQpR8anlI74Q==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete this file" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -682,16 +682,256 @@
 </form>  </div>
 
   <div class="file-info">
-      3 lines (2 sloc)
+      376 lines (305 sloc)
       <span class="file-info-divider"></span>
-    89 Bytes
+    12 KB
   </div>
 </div>
 
     
   <div id="readme" class="readme blob instapaper_body">
-    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-stat6306introdatascience" class="anchor" aria-hidden="true" href="#stat6306introdatascience"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stat6306introdatascience</h1>
-<p>Files and projects for Stat 6306 Introduction to Data Science</p>
+    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-eda-nytclicks" class="anchor" aria-hidden="true" href="#eda-nytclicks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EDA-NYTClicks</h1>
+<p>Monnie McGee<br>
+September 9, 2015</p>
+<p>This is the R markdown document for keeping track of code used to explore the NYT clicks data from May 1, 2012.</p>
+<p>Required packages: doBy and ggplot2. Install and/or load these packages before trying the code below.</p>
+<div class="highlight highlight-source-r"><pre>library(<span class="pl-smi">ggplot2</span>)
+library(<span class="pl-smi">doBy</span>)</pre></div>
+<pre><code>## Loading required package: survival
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Enter the data</span>
+<span class="pl-smi">fileLocation</span> <span class="pl-k">&lt;-</span> <span class="pl-s"><span class="pl-pds">"</span>http://stat.columbia.edu/~rachel/datasets/nyt1.csv<span class="pl-pds">"</span></span>
+<span class="pl-smi">data1</span> <span class="pl-k">&lt;-</span> read.csv(url(<span class="pl-smi">fileLocation</span>))
+names(<span class="pl-smi">data1</span>) <span class="pl-c"><span class="pl-c">#</span> What are the variable names?</span></pre></div>
+<pre><code>## [1] "Age"         "Gender"      "Impressions" "Clicks"      "Signed_In"
+</code></pre>
+<div class="highlight highlight-source-r"><pre>str(<span class="pl-smi">data1</span>)</pre></div>
+<pre><code>## 'data.frame':	458441 obs. of  5 variables:
+##  $ Age        : int  36 73 30 49 47 47 0 46 16 52 ...
+##  $ Gender     : int  0 1 0 1 1 0 0 0 0 0 ...
+##  $ Impressions: int  3 3 3 3 11 11 7 5 3 4 ...
+##  $ Clicks     : int  0 0 0 0 0 1 1 0 0 0 ...
+##  $ Signed_In  : int  1 1 1 1 1 1 0 1 1 1 ...
+</code></pre>
+<p>The "str" function (pronounced "stir") tells us that all of the variables are in integer format. We may want to change the format of certain variables later, depending on what we are doing with the variable.</p>
+<h2><a id="user-content-task-1-exploratory-data-analysis" class="anchor" aria-hidden="true" href="#task-1-exploratory-data-analysis"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Task 1: Exploratory Data Analysis</h2>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Numerical summary of the data. A good place to start. </span>
+summary(<span class="pl-smi">data1</span>)</pre></div>
+<pre><code>##       Age             Gender       Impressions         Clicks       
+##  Min.   :  0.00   Min.   :0.000   Min.   : 0.000   Min.   :0.00000  
+##  1st Qu.:  0.00   1st Qu.:0.000   1st Qu.: 3.000   1st Qu.:0.00000  
+##  Median : 31.00   Median :0.000   Median : 5.000   Median :0.00000  
+##  Mean   : 29.48   Mean   :0.367   Mean   : 5.007   Mean   :0.09259  
+##  3rd Qu.: 48.00   3rd Qu.:1.000   3rd Qu.: 6.000   3rd Qu.:0.00000  
+##  Max.   :108.00   Max.   :1.000   Max.   :20.000   Max.   :4.00000  
+##    Signed_In     
+##  Min.   :0.0000  
+##  1st Qu.:0.0000  
+##  Median :1.0000  
+##  Mean   :0.7009  
+##  3rd Qu.:1.0000  
+##  Max.   :1.0000
+</code></pre>
+<h2><a id="user-content-question-signed_in-and-gender-are-both-indicator-variables-what-does-the-mean-of-each-of-these-variables-tell-us" class="anchor" aria-hidden="true" href="#question-signed_in-and-gender-are-both-indicator-variables-what-does-the-mean-of-each-of-these-variables-tell-us"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> Signed_In and Gender are both indicator variables. What does the mean of each of these variables tell us?</h2>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> distribution of ages</span>
+hist(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Age</span>, <span class="pl-v">main</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>, <span class="pl-v">xlab</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Age<span class="pl-pds">"</span></span>)</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-4-1.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-4-1.png" alt="" style="max-width:100%;"></a></p>
+<div class="highlight highlight-source-r"><pre>quantile(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Age</span>) </pre></div>
+<pre><code>##   0%  25%  50%  75% 100% 
+##    0    0   31   48  108
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> distribution of Impressions</span>
+hist(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Impressions</span>, <span class="pl-v">main</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>, <span class="pl-v">xlab</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span># of Impressions<span class="pl-pds">"</span></span>)</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-4-2.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-4-2.png" alt="" style="max-width:100%;"></a></p>
+<div class="highlight highlight-source-r"><pre>quantile(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Impressions</span>)</pre></div>
+<pre><code>##   0%  25%  50%  75% 100% 
+##    0    3    5    6   20
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> distribution of Clicks</span>
+hist(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Clicks</span>, <span class="pl-v">main</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>, <span class="pl-v">xlab</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span># of Clicks<span class="pl-pds">"</span></span>)</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-4-3.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-4-3.png" alt="" style="max-width:100%;"></a></p>
+<div class="highlight highlight-source-r"><pre>quantile(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Clicks</span>)</pre></div>
+<pre><code>##   0%  25%  50%  75% 100% 
+##    0    0    0    0    4
+</code></pre>
+<p>It looks like that Age is the only continuous variable. Clicks and Impressions are probably discrete (what makes me think that?). Let's use the 'table' function to determine the values of Clicks and Impressions and how many cases are assigned to each.</p>
+<div class="highlight highlight-source-r"><pre>table(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Clicks</span>)</pre></div>
+<pre><code>## 
+##      0      1      2      3      4 
+## 418603  37372   2330    127      9
+</code></pre>
+<div class="highlight highlight-source-r"><pre>table(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Impressions</span>)</pre></div>
+<pre><code>## 
+##     0     1     2     3     4     5     6     7     8     9    10    11 
+##  3066 15483 38433 64121 80303 80477 66808 48066 30081 16965  8357  3771 
+##    12    13    14    15    16    17    18    20 
+##  1549   647   211    64    25    11     2     1
+</code></pre>
+<h2><a id="user-content-question-what-do-we-learn-from-the-table-function" class="anchor" aria-hidden="true" href="#question-what-do-we-learn-from-the-table-function"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> What do we learn from the table function?</h2>
+<h2><a id="user-content-question-what-does-does-the-function-tabledata1agegroupdata1clicks-tell-us" class="anchor" aria-hidden="true" href="#question-what-does-does-the-function-tabledata1agegroupdata1clicks-tell-us"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> What does does the function "table(data1$AgeGroup,data1$Clicks)" tell us?</h2>
+<h2><a id="user-content-task-2-create-a-new-variable-for-age-groups-that-categorizes-users-as-18-18-24-25-34-35-44-45-54-55-64-and-65" class="anchor" aria-hidden="true" href="#task-2-create-a-new-variable-for-age-groups-that-categorizes-users-as-18-18-24-25-34-35-44-45-54-55-64-and-65"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Task 2: Create a new variable for age groups that categorizes users as "&lt;18", "18-24", "25-34", "35-44", "45-54", "55-64", and "65+".</h2>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Create age groups</span>
+<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">AgeGroup</span> <span class="pl-k">&lt;-</span> cut(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Age</span>, c(<span class="pl-k">-</span><span class="pl-c1">Inf</span>, <span class="pl-c1">18</span>, <span class="pl-c1">24</span>, <span class="pl-c1">34</span>, <span class="pl-c1">44</span>, <span class="pl-c1">54</span>, <span class="pl-c1">64</span>, <span class="pl-c1">Inf</span>))
+levels(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">AgeGroup</span>) <span class="pl-k">&lt;-</span> c(<span class="pl-s"><span class="pl-pds">"</span>&lt;18<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>18-24<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>25-34<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>35-44<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>45-54<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>55-64<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>65+<span class="pl-pds">"</span></span>)
+summaryBy(<span class="pl-smi">Gender</span><span class="pl-k">+</span><span class="pl-smi">Signed_In</span><span class="pl-k">+</span><span class="pl-smi">Impressions</span><span class="pl-k">+</span><span class="pl-smi">Clicks</span><span class="pl-k">~</span><span class="pl-smi">AgeGroup</span>, <span class="pl-v">data</span><span class="pl-k">=</span><span class="pl-smi">data1</span>)</pre></div>
+<pre><code>##   AgeGroup Gender.mean Signed_In.mean Impressions.mean Clicks.mean
+## 1      &lt;18  0.07906215      0.1231277         4.999571  0.14072193
+## 2    18-24  0.53385313      1.0000000         5.006635  0.04845478
+## 3    25-34  0.53216213      1.0000000         4.993829  0.05048647
+## 4    35-44  0.53169630      1.0000000         5.021507  0.05167937
+## 5    45-54  0.52897897      1.0000000         5.010406  0.05027377
+## 6    55-64  0.53618848      1.0000000         5.022308  0.10183736
+## 7      65+  0.36326644      1.0000000         5.012347  0.15128856
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Create a function. What does this function do?</span>
+<span class="pl-en">siterange</span> <span class="pl-k">&lt;-</span> <span class="pl-k">function</span>(<span class="pl-smi">x</span>){c(<span class="pl-v">n</span><span class="pl-k">=</span>length(<span class="pl-smi">x</span>),<span class="pl-v">MIN</span><span class="pl-k">=</span>min(<span class="pl-smi">x</span>),<span class="pl-v">MEAN</span><span class="pl-k">=</span>mean(<span class="pl-smi">x</span>),<span class="pl-v">MAX</span><span class="pl-k">=</span>max(<span class="pl-smi">x</span>))}
+summaryBy(<span class="pl-smi">Age</span><span class="pl-k">~</span><span class="pl-smi">AgeGroup</span>, <span class="pl-v">data</span><span class="pl-k">=</span><span class="pl-smi">data1</span>, <span class="pl-v">FUN</span><span class="pl-k">=</span><span class="pl-smi">siterange</span>)</pre></div>
+<pre><code>##   AgeGroup  Age.n Age.MIN  Age.MEAN Age.MAX
+## 1      &lt;18 156358       0  1.974168      18
+## 2    18-24  35270      19 21.269039      24
+## 3    25-34  58174      25 29.503352      34
+## 4    35-44  70860      35 39.494680      44
+## 5    45-54  64288      45 49.492580      54
+## 6    55-64  44738      55 59.498189      64
+## 7      65+  28753      65 72.988697     108
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Histogram of Impressions by Age Group</span>
+ggplot(<span class="pl-smi">data1</span>,aes(<span class="pl-v">x</span><span class="pl-k">=</span><span class="pl-smi">Impressions</span>,<span class="pl-v">fill</span><span class="pl-k">=</span><span class="pl-smi">AgeGroup</span>))<span class="pl-k">+</span>geom_histogram(<span class="pl-v">binwidth</span><span class="pl-k">=</span><span class="pl-c1">1</span>)</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-6-1.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-6-1.png" alt="" style="max-width:100%;"></a></p>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Boxplot of Impressions by Age Group</span>
+ggplot(<span class="pl-smi">data1</span>,aes(<span class="pl-v">x</span><span class="pl-k">=</span><span class="pl-smi">AgeGroup</span>,<span class="pl-v">y</span><span class="pl-k">=</span><span class="pl-smi">Impressions</span>))<span class="pl-k">+</span>geom_boxplot()</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-6-2.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-6-2.png" alt="" style="max-width:100%;"></a></p>
+<h2><a id="user-content-question-why-are-there-individuals-that-are-0-years-old-in-the-data-set-describe-these-individuals-using-the-other-variables-should-we-delete-these-individuals-from-the-data-set-why-or-why-not--the-code-below-is-a-good-starting-place-what-else-would-you-want-to-do-if-anything" class="anchor" aria-hidden="true" href="#question-why-are-there-individuals-that-are-0-years-old-in-the-data-set-describe-these-individuals-using-the-other-variables-should-we-delete-these-individuals-from-the-data-set-why-or-why-not--the-code-below-is-a-good-starting-place-what-else-would-you-want-to-do-if-anything"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> Why are there individuals that are 0 years old in the data set? Describe these individuals using the other variables. Should we delete these individuals from the data set? Why or why not?  The code below is a good starting place. What else would you want to do (if anything)?</h2>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">dataChild</span> <span class="pl-k">&lt;-</span> subset(<span class="pl-smi">data1</span>, <span class="pl-smi">Age</span><span class="pl-k">==</span><span class="pl-c1">0</span>)
+dim(<span class="pl-smi">dataChild</span>)</pre></div>
+<pre><code>## [1] 137106      6
+</code></pre>
+<div class="highlight highlight-source-r"><pre>summary(<span class="pl-smi">dataChild</span>)</pre></div>
+<pre><code>##       Age        Gender   Impressions     Clicks         Signed_In
+##  Min.   :0   Min.   :0   Min.   : 0   Min.   :0.0000   Min.   :0  
+##  1st Qu.:0   1st Qu.:0   1st Qu.: 3   1st Qu.:0.0000   1st Qu.:0  
+##  Median :0   Median :0   Median : 5   Median :0.0000   Median :0  
+##  Mean   :0   Mean   :0   Mean   : 5   Mean   :0.1421   Mean   :0  
+##  3rd Qu.:0   3rd Qu.:0   3rd Qu.: 6   3rd Qu.:0.0000   3rd Qu.:0  
+##  Max.   :0   Max.   :0   Max.   :18   Max.   :4.0000   Max.   :0  
+##                                                                   
+##   AgeGroup     
+##  &lt;18  :137106  
+##  18-24:     0  
+##  25-34:     0  
+##  35-44:     0  
+##  45-54:     0  
+##  55-64:     0  
+##  65+  :     0
+</code></pre>
+<div class="highlight highlight-source-r"><pre>summaryBy(<span class="pl-smi">Signed_In</span><span class="pl-k">+</span><span class="pl-smi">Clicks</span><span class="pl-k">+</span><span class="pl-smi">Impressions</span><span class="pl-k">~</span><span class="pl-smi">Gender</span>,<span class="pl-v">data</span><span class="pl-k">=</span><span class="pl-smi">dataChild</span>,<span class="pl-v">FUN</span><span class="pl-k">=</span><span class="pl-smi">siterange</span>)</pre></div>
+<pre><code>##   Gender Signed_In.n Signed_In.MIN Signed_In.MEAN Signed_In.MAX Clicks.n
+## 1      0      137106             0              0             0   137106
+##   Clicks.MIN Clicks.MEAN Clicks.MAX Impressions.n Impressions.MIN
+## 1          0   0.1420799          4        137106               0
+##   Impressions.MEAN Impressions.MAX
+## 1         4.999657              18
+</code></pre>
+<h2><a id="user-content-question-does-gender0-always-mean-that-the-user-is-female-why-or-why-not" class="anchor" aria-hidden="true" href="#question-does-gender0-always-mean-that-the-user-is-female-why-or-why-not"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> Does Gender=0 always mean that the user is female? Why or why not?</h2>
+<h2><a id="user-content-task-3-for-a-single-day-plot-distributions-of-number-impressions-and-click-through-rate-ctr--clickimpressions-for-these-age-categories" class="anchor" aria-hidden="true" href="#task-3-for-a-single-day-plot-distributions-of-number-impressions-and-click-through-rate-ctr--clickimpressions-for-these-age-categories"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Task 3: For a single day, plot distributions of number impressions and click-through-rate (CTR = click/impressions) for these age categories</h2>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Define a new variable to segment Impressions into two groups</span>
+<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">hasImps</span> <span class="pl-k">&lt;-</span> cut(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Impressions</span>, c(<span class="pl-k">-</span><span class="pl-c1">Inf</span>,<span class="pl-c1">0</span>,<span class="pl-c1">Inf</span>))
+summaryBy(<span class="pl-smi">Clicks</span><span class="pl-k">~</span><span class="pl-smi">hasImps</span>, <span class="pl-v">data</span><span class="pl-k">=</span><span class="pl-smi">data1</span>, <span class="pl-v">FUN</span><span class="pl-k">=</span><span class="pl-smi">siterange</span>)</pre></div>
+<pre><code>##    hasImps Clicks.n Clicks.MIN Clicks.MEAN Clicks.MAX
+## 1 (-Inf,0]     3066          0  0.00000000          0
+## 2 (0, Inf]   455375          0  0.09321768          4
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Create a factor based on Impressions and Clicks</span>
+<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">scode</span>[<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Impressions</span> <span class="pl-k">==</span> <span class="pl-c1">0</span>] <span class="pl-k">&lt;-</span> <span class="pl-s"><span class="pl-pds">"</span>NoImps<span class="pl-pds">"</span></span>
+<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">scode</span>[<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Impressions</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>] <span class="pl-k">&lt;-</span> <span class="pl-s"><span class="pl-pds">"</span>Imps<span class="pl-pds">"</span></span>
+<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">scode</span>[<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">Clicks</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>] <span class="pl-k">&lt;-</span> <span class="pl-s"><span class="pl-pds">"</span>Clicks<span class="pl-pds">"</span></span>
+<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">scode</span> <span class="pl-k">&lt;-</span> <span class="pl-k">factor</span>(<span class="pl-smi">data1</span><span class="pl-k">$</span><span class="pl-smi">scode</span>)
+head(<span class="pl-smi">data1</span>)</pre></div>
+<pre><code>##   Age Gender Impressions Clicks Signed_In AgeGroup  hasImps  scode
+## 1  36      0           3      0         1    35-44 (0, Inf]   Imps
+## 2  73      1           3      0         1      65+ (0, Inf]   Imps
+## 3  30      0           3      0         1    25-34 (0, Inf]   Imps
+## 4  49      1           3      0         1    45-54 (0, Inf]   Imps
+## 5  47      1          11      0         1    45-54 (0, Inf]   Imps
+## 6  47      0          11      1         1    45-54 (0, Inf] Clicks
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Create a function. What does it do?</span>
+<span class="pl-en">clen</span> <span class="pl-k">&lt;-</span> <span class="pl-k">function</span>(<span class="pl-smi">x</span>){c(length(<span class="pl-smi">x</span>))}
+<span class="pl-smi">etable</span> <span class="pl-k">&lt;-</span> summaryBy(<span class="pl-smi">Impressions</span><span class="pl-k">~</span><span class="pl-smi">scode</span><span class="pl-k">+</span><span class="pl-smi">Gender</span><span class="pl-k">+</span><span class="pl-smi">AgeGroup</span>,<span class="pl-v">data</span><span class="pl-k">=</span><span class="pl-smi">data1</span>,<span class="pl-v">FUN</span><span class="pl-k">=</span><span class="pl-smi">clen</span>)
+<span class="pl-smi">etable</span></pre></div>
+<pre><code>##     scode Gender AgeGroup Impressions.clen
+## 1  Clicks      0      &lt;18            18622
+## 2  Clicks      0    18-24              779
+## 3  Clicks      0    25-34             1361
+## 4  Clicks      0    35-44             1675
+## 5  Clicks      0    45-54             1494
+## 6  Clicks      0    55-64             2006
+## 7  Clicks      0      65+             2598
+## 8  Clicks      1      &lt;18             1525
+## 9  Clicks      1    18-24              890
+## 10 Clicks      1    25-34             1509
+## 11 Clicks      1    35-44             1917
+## 12 Clicks      1    45-54             1645
+## 13 Clicks      1    55-64             2331
+## 14 Clicks      1      65+             1486
+## 15   Imps      0      &lt;18           124402
+## 16   Imps      0    18-24            15538
+## 17   Imps      0    25-34            25690
+## 18   Imps      0    35-44            31290
+## 19   Imps      0    45-54            28563
+## 20   Imps      0    55-64            18626
+## 21   Imps      0      65+            15585
+## 22   Imps      1      &lt;18            10754
+## 23   Imps      1    18-24            17807
+## 24   Imps      1    25-34            29241
+## 25   Imps      1    35-44            35512
+## 26   Imps      1    45-54            32143
+## 27   Imps      1    55-64            21499
+## 28   Imps      1      65+             8887
+## 29 NoImps      0      &lt;18              972
+## 30 NoImps      0    18-24              124
+## 31 NoImps      0    25-34              165
+## 32 NoImps      0    35-44              219
+## 33 NoImps      0    45-54              224
+## 34 NoImps      0    55-64              118
+## 35 NoImps      0      65+              125
+## 36 NoImps      1      &lt;18               83
+## 37 NoImps      1    18-24              132
+## 38 NoImps      1    25-34              208
+## 39 NoImps      1    35-44              247
+## 40 NoImps      1    45-54              219
+## 41 NoImps      1    55-64              158
+## 42 NoImps      1      65+               72
+</code></pre>
+<h2><a id="user-content-question-what-does-etable-tell-us" class="anchor" aria-hidden="true" href="#question-what-does-etable-tell-us"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> What does 'etable' tell us?</h2>
+<h2><a id="user-content-question-what-does-it-mean-to-have-zero-impressions-what-does-it-mean-to-have-zero-impressions-and-a-postive-number-of-clicks" class="anchor" aria-hidden="true" href="#question-what-does-it-mean-to-have-zero-impressions-what-does-it-mean-to-have-zero-impressions-and-a-postive-number-of-clicks"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> What does it mean to have zero Impressions? What does it mean to have zero Impressions and a postive number of clicks?</h2>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> Create plot of CTR for a subset of the data where Impressions &gt; 0</span>
+<span class="pl-smi">d1</span> <span class="pl-k">&lt;-</span> subset(<span class="pl-smi">data1</span>, <span class="pl-smi">Impressions</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>)
+<span class="pl-smi">d1</span><span class="pl-k">$</span><span class="pl-smi">CTR</span> <span class="pl-k">&lt;-</span> <span class="pl-smi">d1</span><span class="pl-k">$</span><span class="pl-smi">Clicks</span><span class="pl-k">/</span><span class="pl-smi">d1</span><span class="pl-k">$</span><span class="pl-smi">Impressions</span>
+ggplot(<span class="pl-smi">d1</span>,aes(<span class="pl-v">x</span><span class="pl-k">=</span><span class="pl-smi">CTR</span>, <span class="pl-v">colour</span><span class="pl-k">=</span><span class="pl-smi">AgeGroup</span>))<span class="pl-k">+</span>geom_density()</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-9-1.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-9-1.png" alt="" style="max-width:100%;"></a></p>
+<div class="highlight highlight-source-r"><pre>ggplot(subset(<span class="pl-smi">d1</span>, <span class="pl-smi">Clicks</span> <span class="pl-k">&gt;</span><span class="pl-c1">0</span>),aes(<span class="pl-v">x</span><span class="pl-k">=</span><span class="pl-smi">CTR</span>, <span class="pl-v">colour</span><span class="pl-k">=</span><span class="pl-smi">AgeGroup</span>))<span class="pl-k">+</span>geom_density()</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-9-2.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-9-2.png" alt="" style="max-width:100%;"></a></p>
+<div class="highlight highlight-source-r"><pre>ggplot(subset(<span class="pl-smi">d1</span>, <span class="pl-smi">CTR</span><span class="pl-k">&gt;</span><span class="pl-c1">0</span>), aes(<span class="pl-v">x</span><span class="pl-k">=</span><span class="pl-smi">CTR</span>, <span class="pl-v">fill</span><span class="pl-k">=</span><span class="pl-smi">AgeGroup</span>))<span class="pl-k">+</span>
+    labs(<span class="pl-v">title</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Click-through rate by age group (05/01/2012)<span class="pl-pds">"</span></span>)<span class="pl-k">+</span>
+    geom_histogram(<span class="pl-v">binwidth</span><span class="pl-k">=</span>.<span class="pl-c1">025</span>)</pre></div>
+<p><a target="_blank" rel="noopener noreferrer" href="/fikramulla/stat6306introdatascience/blob/master/EDA-NYTdata_files/figure-html/unnamed-chunk-9-3.png"><img src="/fikramulla/stat6306introdatascience/raw/master/EDA-NYTdata_files/figure-html/unnamed-chunk-9-3.png" alt="" style="max-width:100%;"></a></p>
+<h2><a id="user-content-question-summarize-these-plots-what-do-they-tell-you-about-the-relationship-between-click-through-rate-and-age" class="anchor" aria-hidden="true" href="#question-summarize-these-plots-what-do-they-tell-you-about-the-relationship-between-click-through-rate-and-age"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Question:</strong> Summarize these plots. What do they tell you about the relationship between Click through rate and age?</h2>
+<h2><a id="user-content-task-4" class="anchor" aria-hidden="true" href="#task-4"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Task 4</h2>
+<ul>
+<li>Define a new variable to segment users based on their click behavior</li>
+<li>Explore the data and make visual comparisons of click behavior across user segments</li>
+<li>Create metrics/measurements/statistics that summarize the data
+Note that this is an unordered list. You can do this in any order.</li>
+</ul>
+<h2><a id="user-content-case-study-i-due-october-1" class="anchor" aria-hidden="true" href="#case-study-i-due-october-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Case Study I due October 1</h2>
+<ul>
+<li>Extend this analysis across days</li>
+<li>Visualize some metrics and distributions over time</li>
+<li>Describe and interpret any patterns you find</li>
+<li>Put it all in an R markdown (or md) document
+Note: This will take time. You will need to use Google and StackOverflow and other help. You will not be able to analyze absolutely everything. You have other classes. Pick one or two questions of interest to you (not to me!) and concentrate on those.</li>
+</ul>
 </article>
   </div>
 
@@ -720,7 +960,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.18680s from unicorn-6bf956c6fd-vqsb5">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.23814s from unicorn-67b74d47b8-cln87">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
